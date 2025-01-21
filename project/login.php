@@ -17,7 +17,7 @@ $user = $_POST['username'] ?? '';
 $pass = $_POST['password'] ?? '';
 
 // Preparar la consulta para prevenir inyecciones SQL
-$sql = "SELECT * FROM login WHERE usuario = ?";
+$sql = "SELECT * FROM login WHERE Username = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $user);
 $stmt->execute();
